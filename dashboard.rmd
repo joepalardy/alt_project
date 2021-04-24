@@ -83,7 +83,7 @@ library(gridExtra)
 
 Todo:
 1. In the r code, present a simple table with your rsq and mse for your testing set.
-2. Also in the r code, create a horizontal bar plot of parameter estimates. Sort them from largest to smallest first and drop the intercept. From a fitted model use pull_workload_fit() %>% tidy() to get the parameter estimates.
+2. Also in the r code, create a horizontal bar plot of parameter estimates. Sort them from largest to smallest first and drop the intercept. From a fitted model use %>% pull_workflow_fit() %>% tidy()  to get the parameter estimates.
 3. In the notes, comment on the magnitude and direction of the parameter estimates.
 
 
