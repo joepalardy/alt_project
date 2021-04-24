@@ -3,10 +3,10 @@ title: "Project Ohio Schools"
 mainfont: DejaVu Sans
 output:
   flexdashboard::flex_dashboard:
-  storyboard: true
-pdf_document:
-  latex_engine: xelatex
-word_document: default
+    storyboard: true
+  pdf_document:
+    latex_engine: xelatex
+  word_document: default
 font-family: Times New Roman
 ---
   
