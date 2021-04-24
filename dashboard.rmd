@@ -1,5 +1,5 @@
 ---
-title: "Project Ohio Schools"
+title: "PISA Project"
 mainfont: DejaVu Sans
 output:
   flexdashboard::flex_dashboard:
