@@ -1,0 +1,125 @@
+---
+title: "Project Ohio Schools"
+mainfont: DejaVu Sans
+output:
+  flexdashboard::flex_dashboard:
+  storyboard: true
+pdf_document:
+  latex_engine: xelatex
+word_document: default
+font-family: Times New Roman
+---
+  
+  
+```{r, message=FALSE, echo = F} 
+library(knitr)
+library(skimr)
+library(tidyverse)
+library(tidymodels)
+library(vip)
+
+```
+
+### Project Overview
+Todo:
+1. Add a short introduction to the project. The goal is to predict student performance without location data.
+
+
+### Data Description
+Todo: 
+1. Provide a link to the OECD PISA data and a quick description of what it is about. Use information from the OECD.
+2. Mention the learningtower R package.
+3. In the r code, load in the data dictionary in the data folder and display it as a datatable.
+
+```{r }
+library(DT)
+#use datatable
+
+```
+
+
+### Data Summary
+
+Todo:
+1. In the r code, provide summary statistics for the data.
+2. In the comments, provide some commentary about the data. In particular talk about the parent's education levels. You may need to look those up from the OECD. This subset of the data doesn't have all the levels.
+
+```{r echo = F}
+
+```
+
+*** 
+
+
+
+### Correlations
+Todo:
+1. In the r code, create a correlation plot for the data. GGally can sometimes be picky about too many factors. If you run into that problem, considering restricting your analysis a bit.
+2. In the comments, write a couple sentences about the correlations.
+
+```{r}
+
+```
+
+***
+
+
+### School Perfomance by Location.
+
+Todo:
+1. Use the code from data_cleaning to create a map of math performance by country.
+2. Use the code from data_cleaning to create a map of wealth by country.
+3. Try using grid.arrange from the gridExtra package to get both maps on the screen. (Not required)
+4. If you want a challenge, try incorporating Shiny. https://rmarkdown.rstudio.com/flexdashboard/shiny.html to swich between the maps. (Not required)
+
+```{r map}
+library(gridExtra)
+```
+
+***
+
+
+### LASSO
+
+Todo:
+1. In the r code, present a simple table with your rsq and mse for your testing set.
+2. Also in the r code, create a horizontal bar plot of parameter estimates. Sort them from largest to smallest first and drop the intercept. From a fitted model use pull_workload_fit() %>% tidy() to get the parameter estimates.
+3. In the notes, comment on the magnitude and direction of the parameter estimates.
+
+
+
+```{r lasso, echo = F}
+
+
+```
+
+***
+  
+
+
+### Boosted Trees
+
+Todo:
+1. In the r code, present a simple table with your rsq and mse for your testing set.
+2. Also in the r code, create a variable importance plot using vip.
+3. In the comments, comment on plot.
+4. In the comments, discuss the difference between rsq and mse for LASSO and the Boosted Trees.
+
+```{r}
+
+```
+
+*** 
+
+
+
+### Conclusions
+Todo:
+1. Discuss how well your models did in predicting math performance.
+2. Discuss what features were the most and least important.
+
+#### Future study
+
+Todo:
+1. Do a search for grouped categorical variables for LASSO and comment on how it might pertain to this data.
+2. Do a search for multi-level models. Comment on how this type of model might work well for this data.
